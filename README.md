@@ -189,7 +189,7 @@ You will also need API keys for the chosen LLM:
 * **Equation Validity**: The LLM suggests equations. These should always be reviewed for correctness and appropriateness to the model's logic.
 * **Error Handling**: The script includes some basic error handling, particularly for JSON parsing and API responses. However, more robust error handling might be needed for production use.
 * **Prompt Engineering**: The quality of the output is highly dependent on the prompt sent to the LLM. The current prompt is designed for typical stock and flow diagrams but might need adjustments for specific or unconventional diagram styles.
-* **Model Configuration**: The Gemini model configuration (`gemini_config`) is set for lower temperature (0.2) to reduce randomness. OpenAI's call specifies a temperature of 1 and top_p of 0.1. These parameters can be tweaked to potentially improve results.
+* **Model Configuration**: The Gemini model configuration (`gemini_config`) is set for lower temperature (0.2) to reduce randomness. OpenAI's call specifies a temperature of 1 and top_p of 0.1. These parameters can be tweaked to potentially improve results. There may be necessary adjustments on API call functions if the syntax for APIs changes with the new versions of LLMs.
 
 ## Future Improvements
 
@@ -207,5 +207,5 @@ Contributions are welcome! If you have suggestions for improvements or find any 
 
 ## 👩‍💻 Author
 
-Created by Zhenghua (Steve) Yang.
+Created by Zhenghua (Steve) Yang, with the love ❤️ and help 🙏 from AI chatbots.
 Feel free to customize or extend it!
