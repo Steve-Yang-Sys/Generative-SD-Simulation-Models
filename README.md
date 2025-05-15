@@ -1,5 +1,5 @@
 # Generative-SD-Simulation-Models
-This repository contains Python code to transform textual outputs from Large Language Models (LLMs) like ChatGPT and Gemini into standard XMILE model file that can be directly open on most System Dynamics (SD) software tools. It encompasses two parts: 1. directly talk with LLMs on the website and export JSON data file manually; 2. use API call.
+This repository contains Python codes to transform textual outputs from Large Language Models (LLMs) like ChatGPT and Gemini into standard XMILE model files that can be directly open on most System Dynamics (SD) software tools. It encompasses two parts: 1. **JSON-to-XMILE Converter (no API required)**; 2. **SD Model Image Identification with API**. In the first case, users can talk with LLMs on the website and ask them to export model information directly in JSON data format. Regarding the second application, programmers or developers can directly send prompts within the API call for SD model image identification. Users are free to choose the way depending on their own preference.
 
 # 🧭 JSON-to-XMILE Converter (no API required)
 
