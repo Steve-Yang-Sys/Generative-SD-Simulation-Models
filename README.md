@@ -23,9 +23,10 @@ The script reads your model structure from model.json
 
 ## 📁 Step 1: File Preparation
 
-1. Create and export a JSON model output from your LLM (e.g., ChatGPT or Gemini) by using the suggested prompts.
+1. Create and export a JSON model output from your LLM (e.g., ChatGPT or Gemini) by using the suggested prompts here.
+# Dynamic model building in natural language:
  ```
-    As a system dynamics expert, I hope you can suggest a system dynamics model on "**DESCRIBE YOUR QUESTION HERE**", and strictly follow all the texts in the prompt as given below: 
+    As a system dynamics expert, I hope you can suggest a system dynamics model on "DESCRIBE YOUR QUESTION HERE!", and strictly follow all the texts in the prompt as given below: 
 prompt = (
         "Use plain texts for all the variable names and extract the following information in JSON format: stocks, flows, auxiliaries, and connectors. "
         "Return a JSON object with keys: 'stocks', 'flows', 'auxiliaries', 'connectors'. "
@@ -33,6 +34,11 @@ prompt = (
         "For stocks, also extract 'inflows' and 'outflows' as lists of flow names. "
         "Each connector should be an object with properties 'src' and 'tgt' and they are different from flows. If there is a causal link from 'stock' to 'flow' or other 'auxiliaries', their relationships should be considered in the 'connectors' part. " 
 )
+ ```
+# Augumented SD with computer vision:
+ ```
+   As a system dynamics expert, I hope you can analyze the given image and strictly follow all the texts in the prompt as given below:
+prompt = ( "Analyze the stock and flow diagram in the System Dynamics model. " "Extract the following information in JSON format: stocks, flows, auxiliaries, and connectors. " "Return a JSON object with keys: 'stocks', 'flows', 'auxiliaries', 'connectors'. " "Each of 'stocks', 'flows', and 'auxiliaries' should be an array of objects with a 'name' property, a 'description' property for adding documentation and explanation for each variable suggested by you, a 'unit' property for reasonable units that you suggest, and an 'eqn' property for sound equations that you suggest. " "As well as their relative location information in the given image: 'x' and 'y' coordinates (in pixels). " "For stocks, also extract 'inflows' and 'outflows' as lists of flow names. " "List all the names as original. " "Each connector should be an object with properties 'src' and 'tgt' and ONLY take the arrow links between model variables into account. " "You need to add the causal links from 'stock' to 'flow' in the 'connectors' part if the variable name of 'stock' is used in the suggested 'flow' equation. " "To avoid any omissions, make sure and check every object with properties 'src' and 'tgt' in 'connectors' has been classified as either 'stocks', or 'flows', or 'auxiliaries'. " "Add their causal relationships in 'connectors' part if any variable is used as part of the equation of another variable. " )
  ```
 3. Save that content into a file named: "model.json". 💡 You can copy-paste the JSON text into a file using any text editor (e.g., Notepad, VS Code) and save it as model.json.
 4. Place this file in the same folder as the Python script of "JSON_to_XMILE.py".
