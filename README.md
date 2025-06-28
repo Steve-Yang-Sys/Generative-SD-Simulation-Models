@@ -141,7 +141,7 @@ You will also need API keys for the chosen LLM:
     Open the script (`SD Model Image Identification (API).py`) and replace the placeholder API keys with your actual keys:
     ```python
     openai_api_key = "YOUR_OPENAI_API_KEY"  # Replace with your OpenAI API key
-    GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"    # Replace with your Google Gemini API key
+    GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"  # Replace with your Google Gemini API key
     ```
     **Important**: Keep your API keys secure and do not commit them to public repositories. Consider using environment variables or a configuration file for managing API keys in a production environment.
 4.  **Prepare your Image**:
